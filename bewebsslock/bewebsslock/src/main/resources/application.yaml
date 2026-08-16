@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: bewebsslock
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3307/sslock?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Bangkok&characterEncoding=UTF-8}
+    username: ${DB_USERNAME:sslock}
+    password: ${DB_PASSWORD:sslock123}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate.format_sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:lam1871231@gmail.com}
+    password: ${MAIL_PASSWORD:dlufzdufnepxirfn}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: ${PORT:8080}
+
+app:
+  cors-origin: ${CORS_ORIGIN:http://localhost:5173}
