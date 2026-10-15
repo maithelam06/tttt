@@ -85,54 +85,54 @@ function Storefront({ products, keyword, onKeywordChange, compareIds, onToggleCo
               features: ["Vân tay", "Mã số", "Face ID 3D", "App TTLock"],
             }
             return (
-              <div style={{ position: "relative", zIndex: 2, background: "rgba(15, 23, 42, 0.8)", backdropFilter: "blur(14px)", border: "1px solid rgba(255, 255, 255, 0.18)", borderRadius: "20px", padding: "20px", width: "100%", maxWidth: "390px", boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.6)" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-                  <span style={{ background: "linear-gradient(135deg, #f59e0b, #d97706)", color: "#ffffff", fontSize: "11px", fontWeight: 700, padding: "4px 10px", borderRadius: "20px", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                    ⭐ Khóa Tiêu Biểu Nổi Bật
+              <div style={{ position: "relative", zIndex: 2, background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "14px", padding: "22px", width: "100%", maxWidth: "390px", boxShadow: "var(--shadow-md)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
+                  <span style={{ background: "var(--accent-gold-bg, #f5ede2)", color: "var(--accent-gold, #a37c44)", border: "1px solid var(--btn-sec-border)", fontSize: "11px", fontWeight: 700, padding: "4px 10px", borderRadius: "20px", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                    Khóa Tiêu Biểu
                   </span>
-                  <span style={{ color: "#94a3b8", fontSize: "12px", fontWeight: 600 }}>SKU: {featuredLock.sku}</span>
+                  <span style={{ color: "var(--text-muted)", fontSize: "12px", fontWeight: 600 }}>SKU: {featuredLock.sku}</span>
                 </div>
 
-                <div style={{ borderRadius: "12px", overflow: "hidden", marginBottom: "14px", border: "1px solid rgba(255, 255, 255, 0.1)", background: "#091327" }}>
+                <div style={{ borderRadius: "10px", overflow: "hidden", marginBottom: "14px", border: "1px solid var(--border)", background: "var(--bg-page)" }}>
                   <ProductVisual product={featuredLock} />
                 </div>
 
-                <h3 style={{ color: "#ffffff", fontSize: "16px", fontWeight: 700, margin: "0 0 6px", lineHeight: "1.4" }}>
+                <h3 style={{ color: "var(--text-base)", fontSize: "16px", fontWeight: 700, margin: "0 0 6px", lineHeight: "1.4" }}>
                   {featuredLock.name}
                 </h3>
 
-                <div style={{ display: "flex", alignItems: "baseline", gap: "10px", margin: "8px 0 12px" }}>
-                  <strong style={{ color: "#38bdf8", fontSize: "21px", fontWeight: 800 }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "10px", margin: "8px 0 14px" }}>
+                  <strong style={{ color: "var(--accent-gold, #a37c44)", fontSize: "22px", fontWeight: 800 }}>
                     {formatMoney(featuredLock.price)}
                   </strong>
-                  <span style={{ color: "#94a3b8", fontSize: "12px" }}>
+                  <span style={{ color: "var(--text-muted)", fontSize: "12px", fontWeight: 500 }}>
                     Bảo hành {featuredLock.warrantyMonths || 24} tháng
                   </span>
                 </div>
 
-                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "16px" }}>
-                  <span style={{ background: "rgba(56, 189, 248, 0.15)", color: "#38bdf8", fontSize: "11px", padding: "3px 8px", borderRadius: "6px", border: "1px solid rgba(56, 189, 248, 0.3)" }}>
-                    ✦ Face ID 3D (&lt; 0.5s)
+                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "18px" }}>
+                  <span style={{ background: "var(--bg-page)", color: "var(--text-base)", fontSize: "11.5px", padding: "4px 9px", borderRadius: "4px", border: "1px solid var(--border)", fontWeight: 500 }}>
+                    Face ID 3D (&lt; 0.5s)
                   </span>
-                  <span style={{ background: "rgba(168, 85, 247, 0.15)", color: "#c084fc", fontSize: "11px", padding: "3px 8px", borderRadius: "6px", border: "1px solid rgba(168, 85, 247, 0.3)" }}>
-                    ✦ Vân tay sinh trắc học
+                  <span style={{ background: "var(--bg-page)", color: "var(--text-base)", fontSize: "11.5px", padding: "4px 9px", borderRadius: "4px", border: "1px solid var(--border)", fontWeight: 500 }}>
+                    Vân tay sinh trắc học
                   </span>
-                  <span style={{ background: "rgba(34, 197, 94, 0.15)", color: "#4ade80", fontSize: "11px", padding: "3px 8px", borderRadius: "6px", border: "1px solid rgba(34, 197, 94, 0.3)" }}>
-                    ✦ App TTLock Tiếng Việt
+                  <span style={{ background: "var(--bg-page)", color: "var(--text-base)", fontSize: "11.5px", padding: "4px 9px", borderRadius: "4px", border: "1px solid var(--border)", fontWeight: 500 }}>
+                    App TTLock
                   </span>
                 </div>
 
                 <div style={{ display: "flex", gap: "10px" }}>
                   <button
                     onClick={() => setSelectedProduct(featuredLock)}
-                    style={{ flex: 1, background: "rgba(255, 255, 255, 0.12)", color: "#ffffff", border: "1px solid rgba(255, 255, 255, 0.25)", padding: "10px", borderRadius: "10px", fontSize: "13px", fontWeight: 600, cursor: "pointer", transition: "all 0.15s ease" }}
+                    style={{ flex: 1, background: "var(--btn-sec-bg)", color: "var(--btn-sec-tx)", border: "1px solid var(--btn-sec-border)", padding: "11px", borderRadius: "6px", fontSize: "13px", fontWeight: 600, cursor: "pointer", transition: "all 0.15s ease" }}
                     type="button"
                   >
                     Xem chi tiết
                   </button>
                   <button
                     onClick={() => setModal({ type: "booking", product: featuredLock })}
-                    style={{ flex: 1, background: "linear-gradient(135deg, #2563eb, #1d4ed8)", color: "#ffffff", border: 0, padding: "10px", borderRadius: "10px", fontSize: "13px", fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 12px rgba(37, 99, 235, 0.4)" }}
+                    style={{ flex: 1, background: "var(--btn-primary-bg)", color: "var(--btn-primary-tx)", border: "1px solid var(--btn-primary-bg)", padding: "11px", borderRadius: "6px", fontSize: "13px", fontWeight: 700, cursor: "pointer", boxShadow: "0 2px 8px rgba(158, 121, 70, 0.25)" }}
                     type="button"
                   >
                     Đặt lắp ngay

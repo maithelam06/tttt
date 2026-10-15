@@ -17,6 +17,8 @@ function PublicHeader({
   onLoginClick,
   onNavigate,
   onSearch,
+  theme = "light",
+  onToggleTheme,
 }) {
   const [searchValue, setSearchValue] = useState("")
 
@@ -30,7 +32,15 @@ function PublicHeader({
     <header className="store-header">
       <div className="utility-bar">
         <span>SSLOCK.VN - Siêu thị khóa thông minh chính hãng</span>
-        <div>
+        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+          <button
+            className="theme-toggle-btn"
+            onClick={onToggleTheme}
+            title={theme === "dark" ? "Chuyển sang chế độ sáng" : "Chuyển sang chế độ tối"}
+            type="button"
+          >
+            {theme === "dark" ? "☀️ Sáng" : "🌙 Tối"}
+          </button>
           <span>Hotline: <b>0896 619 196</b></span>
           <button onClick={onLoginClick} type="button">Đăng nhập</button>
         </div>

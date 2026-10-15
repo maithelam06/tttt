@@ -38,6 +38,19 @@ import "./styles/theme.css"
 
 function App() {
   const [path, setPath] = useState(window.location.pathname)
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("sslock_theme") || "light"
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme)
+    localStorage.setItem("sslock_theme", theme)
+  }, [theme])
+
+  function toggleTheme() {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"))
+  }
+
   const [user, setUser] = useState(() => {
     try {
       return JSON.parse(sessionStorage.getItem("sslock_user"))
@@ -303,6 +316,8 @@ function App() {
             onLoginClick={() => navigateTo("/login")}
             onNavigate={navigateTo}
             onSearch={setKeyword}
+            onToggleTheme={toggleTheme}
+            theme={theme}
           />
           <div className="page-enter" key={path}>
             {path === "/" ? (
@@ -356,6 +371,8 @@ function App() {
           activeTab={activeTab}
           onChangeTab={(tab) => navigateTo(`/admin/${tab}`)}
           onLogout={handleLogout}
+          onToggleTheme={toggleTheme}
+          theme={theme}
           user={user}
         />
         <section className="admin-workspace">

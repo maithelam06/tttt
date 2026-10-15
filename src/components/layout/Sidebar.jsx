@@ -18,7 +18,7 @@ const menu = [
   ["staff",        "🔑", "Tài khoản nhân viên"],
 ]
 
-function Sidebar({ activeTab, onChangeTab, onLogout, user }) {
+function Sidebar({ activeTab, onChangeTab, onLogout, user, theme = "light", onToggleTheme }) {
   const role = user?.role?.toLowerCase()
   const allowed = role === "admin"
     ? menu
@@ -30,8 +30,17 @@ function Sidebar({ activeTab, onChangeTab, onLogout, user }) {
 
   return (
     <aside className="admin-sidebar">
-      <div className="admin-brand">
+      <div className="admin-brand" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <img src={adminLogo} alt="SSLock Admin" />
+        <button
+          className="theme-toggle-btn"
+          onClick={onToggleTheme}
+          style={{ padding: "4px 8px", fontSize: "11px" }}
+          title={theme === "dark" ? "Chuyển sang chế độ sáng" : "Chuyển sang chế độ tối"}
+          type="button"
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
       </div>
 
       <nav>

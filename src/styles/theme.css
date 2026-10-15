@@ -1,43 +1,114 @@
 /* ============================================================
-   SSLOCK – DESIGN SYSTEM / THEME TOKENS
+   SSLOCK – LUXURY BEIGE & CHAMPAGNE BRONZE PALETTE
+   Warm minimalist luxury, harmonious tones, no harsh black
    ============================================================ */
-:root {
-  /* Brand */
-  --navy-900: #07101e;
-  --navy-800: #0c1d3c;
-  --navy-700: #0d2a5a;
-  --navy-600: #1e3a8a;
-  --blue-600:  #2563eb;
-  --blue-700:  #1d4ed8;
-  --blue-500:  #3b82f6;
-  --blue-200:  #93c5fd;
-  --gold-500:  #f59e0b;
-  --gold-600:  #d97706;
-  --gold-800:  #b8860b;
 
-  /* Neutral */
-  --bg-page:   #f4f7fb;
-  --bg-card:   #ffffff;
-  --text-base: #0f172a;
-  --text-muted:#64748b;
-  --border:    #e2e8f0;
-  --border-lt: #f1f5f9;
+/* ── Light Mode: Warm Luxury Beige & Soft Bronze ───────────── */
+:root {
+  --theme-mode: "light";
+
+  /* Header & Navigation */
+  --bg-utility:    #f1ebe2;
+  --text-utility:  #756a5c;
+  --border-utility:#e5ded3;
+  --bg-header:     #faf7f2;
+  --text-header:   #342d24;
+  --border-header: #ebe3d7;
+  --bg-menu:       #f5f0e7;
+  --text-menu:     #6a5f51;
+  --text-menu-act: #8c6b3e;
+  --border-menu:   #e6ded2;
+
+  /* Content & Body (Soft Warm Beige Canvas & Milk Silk Ivory Cards) */
+  --bg-page:       #f5efe6;
+  --bg-card:       #fdfbf7;
+  --text-base:     #2e2720;
+  --text-muted:    #7a6f62;
+  --border:        #e2d7ca;
+  --border-input:  #d3c7b8;
+
+  /* Hero & Accent Sections */
+  --bg-hero:       #f8f4ec;
+  --text-hero:     #2a231c;
+  --text-hero-sub: #695d50;
+  --border-hero:   #e6ded4;
+  --tag-hero-bg:   #eee5d8;
+  --tag-hero-border:#dec8ab;
+  --tag-hero-text: #8c6b3e;
+
+  /* Buttons & Controls (Refined Warm Bronze & Amber Gold) */
+  --btn-primary-bg:#9e7946;
+  --btn-primary-tx:#ffffff;
+  --btn-sec-bg:    #fdfbf7;
+  --btn-sec-tx:    #7a5a2e;
+  --btn-sec-border:#dec8ab;
+
+  /* Accent Gold for Badges & Highlights */
+  --accent-gold:   #a37c44;
+  --accent-gold-bg:#f5ede2;
+
+  /* Logo filter (in light mode: invert to warm bronze tone) */
+  --logo-filter: invert(0.2) sepia(0.6) saturate(3) hue-rotate(350deg) brightness(0.4);
+  --header-icon-stroke: #7a5a2e;
+
+  /* Shadows with delicate warm tint */
+  --shadow-sm:  0 1px 4px rgba(78, 60, 40, 0.05);
+  --shadow-md:  0 4px 14px rgba(78, 60, 40, 0.08);
+  --shadow-lg:  0 12px 28px rgba(78, 60, 40, 0.12);
+}
+
+/* ── Dark Mode: Deep Warm Mocha & Champagne Gold ───────────── */
+[data-theme="dark"] {
+  --theme-mode: "dark";
+
+  /* Header & Navigation */
+  --bg-utility:    #1c1713;
+  --text-utility:  #a69a8b;
+  --border-utility:#2e2620;
+  --bg-header:     #231d18;
+  --text-header:   #f7f2ea;
+  --border-header: #352c24;
+  --bg-menu:       #1e1914;
+  --text-menu:     #b8ad9f;
+  --text-menu-act: #d4af37;
+  --border-menu:   #352c24;
+
+  /* Content & Body */
+  --bg-page:       #181410;
+  --bg-card:       #241e18;
+  --text-base:     #f7f3ed;
+  --text-muted:    #aba091;
+  --border:        #3a3128;
+  --border-input:  #4f4337;
+
+  /* Hero & Accent Sections */
+  --bg-hero:       #1e1814;
+  --text-hero:     #fbf7f2;
+  --text-hero-sub: #bfb3a4;
+  --border-hero:   #352c24;
+  --tag-hero-bg:   #2e241c;
+  --tag-hero-border:#524131;
+  --tag-hero-text: #e2ba7d;
+
+  /* Buttons & Controls */
+  --btn-primary-bg:#c49a5b;
+  --btn-primary-tx:#181410;
+  --btn-sec-bg:    #2a221b;
+  --btn-sec-tx:    #e5cca3;
+  --btn-sec-border:#5a4734;
+
+  /* Accent Gold for Badges & Highlights */
+  --accent-gold:   #e2ba7d;
+  --accent-gold-bg:#33271c;
+
+  /* Logo filter (in dark mode: bright warm champagne) */
+  --logo-filter: none;
+  --header-icon-stroke: #e2ba7d;
 
   /* Shadows */
-  --shadow-sm: 0 2px 6px rgba(12,29,60,.05);
-  --shadow-md: 0 6px 20px rgba(12,29,60,.08);
-  --shadow-lg: 0 16px 40px rgba(12,29,60,.12);
-
-  /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-xl: 22px;
-  --radius-full: 9999px;
-
-  /* Transitions */
-  --ease-out-expo: cubic-bezier(.16,1,.3,1);
-  --transition: .24s var(--ease-out-expo);
+  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md:  0 4px 14px rgba(0, 0, 0, 0.6);
+  --shadow-lg:  0 12px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* ── Base resets ─────────────────────────────────────────── */
@@ -46,20 +117,35 @@
 body {
   background: var(--bg-page);
   color: var(--text-base);
-  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.5;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 button, input, select, textarea {
-  font-family: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
 }
 
-/* ── Admin area commerce header fix ─────────────────────── */
-.commerce-header {
-  background: linear-gradient(90deg, var(--navy-800) 0%, #07556a 100%);
-  color: #fff;
+/* ── Theme Toggle Button ──────────────────────────────────── */
+.theme-toggle-btn {
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-base);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 6px;
+  padding: 4px 10px;
+  transition: all 0.2s ease;
+}
+.theme-toggle-btn:hover {
+  background: rgba(128, 128, 128, 0.12);
+  border-color: var(--text-base);
 }

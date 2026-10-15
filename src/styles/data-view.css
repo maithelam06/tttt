@@ -5,10 +5,10 @@
 
 .product-card,
 .table-panel {
-  background: #ffffff;
-  border: 1px solid #e1e7f0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.06);
+  box-shadow: var(--shadow-sm);
 }
 
 .product-card {
@@ -18,7 +18,7 @@
 }
 
 .product-card h3 {
-  color: #172033;
+  color: var(--text-base);
   margin: 0;
 }
 

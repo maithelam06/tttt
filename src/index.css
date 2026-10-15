@@ -61,11 +61,11 @@ p, span, a, li {
 }
 
 body {
-  background: #f4f7fb;
-  color: #1a2640;
+  background: var(--bg-page, #f8f9fa);
+  color: var(--text-base, #111111);
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.5;
   margin: 0;
   min-width: 320px;
 }

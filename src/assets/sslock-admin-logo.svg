@@ -1,16 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="52" viewBox="0 0 200 52" role="img" aria-labelledby="adminLogoTitle">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" role="img" aria-labelledby="adminLogoTitle">
   <title id="adminLogoTitle">SSLock Admin</title>
-  <!-- Lock icon -->
-  <rect x="2" y="18" width="22" height="18" rx="3" fill="none" stroke="#f59e0b" stroke-width="2"/>
-  <path d="M7 18v-5a6 6 0 0 1 12 0v5" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="13" cy="27" r="2.5" fill="#f59e0b"/>
-  <line x1="13" y1="29.5" x2="13" y2="32" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/>
-  <!-- SS text -->
-  <text x="32" y="34" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" fill="#f59e0b" letter-spacing="-1">SS</text>
-  <!-- Lock text -->
-  <text x="62" y="34" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Lock</text>
-  <!-- Dot separator -->
-  <circle cx="121" cy="28" r="2" fill="#4e6a87"/>
-  <!-- Admin tag -->
-  <text x="128" y="33" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#7da5c9">Admin</text>
+
+  <!-- Monochrome Minimalist Lock Graphic -->
+  <g transform="translate(4, 8)">
+    <path d="M 11 16 V 9 C 11 4.5 15 1.5 19.5 1.5 C 24 1.5 28 4.5 28 9 V 16" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="2.6" 
+          stroke-linecap="round"/>
+    <rect x="5" y="15" width="29" height="20" rx="3.5" fill="#ffffff"/>
+    <circle cx="19.5" cy="23" r="2.5" fill="#111111"/>
+    <polygon points="18.2,24 17.5,30 21.5,30 20.8,24" fill="#111111"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="44" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5" fill="#ffffff">SS</text>
+  <text x="74" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="300" letter-spacing="0.5" fill="#ffffff">LOCK</text>
+  
+  <text x="144" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#888888">ADMIN</text>
 </svg>
